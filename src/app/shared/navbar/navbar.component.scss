@@ -1,0 +1,77 @@
+/* 🔧 Compress navbar size */
+.custom-navbar {
+  height: 50px;
+  padding: 0 16px;
+  font-size: 14px;
+
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  img {
+    max-height: 32px;
+  }
+}
+
+/* ✅ Active Nav Link Styling */
+.nav-link.active {
+  font-weight: bold;
+}
+
+/* ✅ Highlight box for active link */
+.highlight-box {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Sticky navbar scroll behavior */
+.scrolled-nav {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  transition: background-color 0.3s ease;
+}
+
+/* ✅ Hide navbar animation */
+.hide-navbar {
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+}
+
+/* ✅ Badge fix for cart */
+.badge {
+  font-size: 0.65rem;
+  padding: 4px 6px;
+}
+
+.cart-icon-wrapper {
+  display: inline-block;
+  position: relative;
+
+  i {
+    font-size: 20px;
+    color: white;
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    font-size: 0.6rem;
+    padding: 4px 6px;
+    line-height: 1;
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

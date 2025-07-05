@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.banner-wrapper {
+  padding: 9px; /* Pink space around the banner */
+  background-color: #f4e3eb; /* Light pink shade */
+}
+
+.home-banner-modern {
+  height: 845px;
+  background-image: url('/assets/images/salon-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 2.5vw;
+  color: white;
+  border-radius: 3px;
+}
+
+
+.banner-overlay {
+  margin-top: 435px; /* 👈 Adjusts vertical position downward */
+  text-align: right;
+}
+
+.banner-title {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #ffffff; /* 👈 Bright white for visibility */
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4); // semi-transparent black
+  border-radius: 0px; 
+}
+
+.banner-subtitle {
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4); // semi-transparent black
+  border-radius: 0px; 
+   display: inline-block;
+}
+
+
+
+/* ====== SECTION TITLES ====== */
+.section-title,
+h1 {
+  color: #d6336c;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ====== FLIP CARD SECTION ====== */
+.hair-offer-wrapper {
+  padding: 2rem 0;
+}
+
+.flip-card {
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  perspective: 1000px;
+  margin: 0 auto;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card-inner:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+  background-color: #fff;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #fff0f7;
+  color: #000;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  text-align: left;
+  overflow-y: auto;
+  font-size: 15px;
+  border: 1px solid #eee;
+}
+
+.offer-item {
+  margin-bottom: 0.8rem;
+}
+
+.offer-item .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer-name {
+  font-weight: 500;
+}
+
+.offer-price {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Responsive Flip Cards */
+@media (max-width: 768px) {
+  .flip-card {
+    max-width: 90vw;
+    height: 90vw;
+  }
+}
+
+/* ====== SERVICES HIGHLIGHTS ====== */
+.highlights {
+  margin-top: 3rem;
+}
+
+.highlights .col-md-4 {
+  transition: transform 0.3s ease;
+}
+
+.highlights .col-md-4:hover {
+  transform: translateY(-25px);
+}
+
+.highlights img {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.highlights h5 {
+  font-weight: 600;
+  color: #333;
+}
+
+.highlights p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ====== EXPLORE LINK ====== */
+.explore-more-link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  padding-right: 30px;
+}
+
+.explore-more-link a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #d6336c;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.explore-more-link a:hover {
+  color: #b12252;
+  border-bottom: 2px solid #b12252;
+}

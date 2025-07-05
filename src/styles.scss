@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+$lightest-pink: #f4e3eb;
+body {
+  background-color: $lightest-pink;
+}
+
+/* src/styles.scss */
+button.btn-outline-primary i {
+  font-size: 1rem;
+}

@@ -1,0 +1,80 @@
+<section class="profile container pt-5 mt-5">
+  <h2 class="section-title">About Snehal's Beyoutie</h2>
+  <p class="about-text">
+    At Snehal’s Beyoutie, we believe that beauty is about confidence. With over a decade of experience, we offer
+    a wide range of salon services — from bridal makeovers to rejuvenating skin treatments — all tailored to
+    enhance your natural beauty.
+  </p>
+
+  <div class="founder-note mt-5 mb-5">
+    <div class="founder-content">
+      <div class="founder-text">
+        <h3 >Meet the Founder</h3>
+        <p>
+          <strong>Snehal Patel</strong> — With 10+ years in the beauty industry, Snehal combines passion and expertise to bring out the best in every client. “I love making people feel confident and radiant.”
+        </p>
+      </div>
+      <div class="founder-image">
+        <img src="assets/images/snehal-patel.jpg" alt="Snehal Patel" />
+      </div>
+    </div>
+  </div>
+
+
+  <div class="gallery mt-5">
+    <h3 class="mb-3">Salon Gallery</h3>
+    <div class="gallery-wrapper">
+      <button class="arrow left" (click)="scrollGallery('left')">&#10094;</button>
+
+      <div class="gallery-scroll">
+        <img *ngFor="let img of galleryImages" [src]="img" alt="Gallery image" />
+      </div>
+
+      <button class="arrow right" (click)="scrollGallery('right')">&#10095;</button>
+    </div>
+  </div>
+
+
+  <div class="team">
+    <h3 class="mt-5 mb-3">Our Service Providers</h3>
+    <ul class="team-list">
+      <li><strong>Sneha Solanki</strong> – Hair Dresser</li>
+      <li><strong>Shital Solanki</strong> – Sr. Beauty Therapist</li>
+      <li><strong>Juhi Patel</strong> – Nail Artist</li>
+      <li><strong>Preeti Maurya</strong> – Jr. Beautician</li>
+      <li><strong>Snehal Patel</strong> – Owner / Hair & Makeup Specialist</li>
+    </ul>
+  </div>
+
+  <div class="certification-note mt-5 mb-5">
+    <div class="certification-content">
+      <div class="certification-text">
+        <h3>Certifications & Expertise</h3>
+        <ul>
+          <li>Certified in Advanced Makeup Techniques – Lakme Academy</li>
+          <li>Hair Styling & Coloring – L’Oréal Professionnel</li>
+          <li>Skincare & Beauty Therapy – VLCC Institute</li>
+        </ul>
+      </div>
+      <div class="certification-image">
+        <img src="assets/images/certificate.jpg" alt="Certificate" />
+      </div>
+    </div>
+  </div>
+
+
+  <div class="testimonials">
+    <h3 class="mt-5 mb-3">Client Testimonials</h3>
+    <blockquote>
+      “Amazing bridal makeover, loved every bit of the experience!” – Priya
+    </blockquote>
+    <blockquote>
+      “Professional, warm and truly skilled team. Highly recommend!” – Rina
+    </blockquote>
+  </div>
+
+  <div class="cta mt-4">
+    <p>Ready to book your transformation?</p>
+    <a href="/services" class="cta-btn">Explore Our Services</a>
+  </div>
+</section>

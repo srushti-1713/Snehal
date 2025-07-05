@@ -1,0 +1,23 @@
+<div class="cart-container container pt-5 mt-5">
+  <h2 class="cart-title">Your Cart</h2>
+
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    Your cart is empty.
+  </div>
+
+  <div class="cart-items" *ngIf="cartItems.length > 0">
+    <div class="cart-item-card" *ngFor="let item of cartItems; let i = index">
+      <div class="item-details">
+        <div class="item-name">{{ item.name }}</div>
+        <div class="item-price">₹{{ item.price }}</div>
+      </div>
+      <button class="remove-btn" (click)="removeItem(i)">Remove</button>
+    </div>
+
+    <div class="cart-total">
+      <div>Total:</div>
+      <div class="total-price">₹{{ getTotal() | number:'1.0-0' }}</div>
+    </div>
+    <button class="checkout-btn" (click)="checkout()">Confirm Booking</button>
+  </div>
+</div>

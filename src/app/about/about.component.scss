@@ -1,0 +1,41 @@
+.about {
+  background-color: #fff4f8;
+  border-radius: 12px;
+  padding: 2rem;
+
+  h2, h3 {
+    color: #d6336c;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .about-image {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li::before {
+      content: "✓ ";
+      color: #d6336c;
+      font-weight: bold;
+    }
+  }
+}

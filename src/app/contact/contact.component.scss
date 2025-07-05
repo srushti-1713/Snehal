@@ -1,0 +1,29 @@
+.contact h2.section-title {
+  color: #d6336c;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  background-color: #ffe6f0 !important;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #d6336c !important; /* Dark pink */
+  border: none;
+  color: white;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #c0255d !important; /* Darker pink on hover */
+}
+
+
+.contact-info-box {
+  background-color: #ffe6f0 !important;
+}
+
+.contact h4 {
+  color: #d6336c;
+  margin-top: 1rem;
+}

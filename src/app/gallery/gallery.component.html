@@ -1,0 +1,8 @@
+<section class="gallery container pt-5 mt-5">
+  <h2>Gallery</h2>
+  <div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let img of galleryImages">
+      <img [src]="img" class="img-fluid rounded" alt="Gallery Image">
+    </div>
+  </div>
+</section>

@@ -1,0 +1,156 @@
+.services {
+  h2 {
+    color: #d6336c;
+    margin-bottom: 1.5rem;
+  }
+
+  .dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #ffe6f0; // light pink dropdown
+    border: 1px solid #d6336c;
+
+    .dropdown-item {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      color: #333;
+
+      &:hover,
+      &.active {
+        background-color: #fcd4e4; // lighter hover pink
+        color: #d6336c;
+      }
+    }
+  }
+
+  .list-group-item {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    background-color: #ffe6f0; // list item background
+    border: none;
+    color: #333;
+
+    &:hover {
+      background-color: #fcd4e4;
+      color: #d6336c;
+    }
+  }
+
+.hair-offer-wrapper {
+  padding: 2rem 0;
+}
+
+.flip-card {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  perspective: 1000px;
+  margin: 0 auto;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card-inner:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+  background-color: #fff;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #fff0f7;
+  color: #000;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  text-align: left;
+  overflow-y: auto;
+  font-size: 10px;
+  border: 1px solid #eee;
+}
+
+.offer-item {
+  margin-bottom: 0.8rem;
+}
+
+.offer-item .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer-name {
+  font-weight: 500;
+}
+
+.offer-price {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Responsive Flip Cards */
+@media (max-width: 768px) {
+  .flip-card {
+    max-width: 90vw;
+    height: 90vw;
+  }
+}
+}
+
+  .col-md-3 > div:nth-child(odd) {
+    background-color: #ffe6f0; // light pink
+  }
+
+  .col-md-3 > div:nth-child(even) {
+    background-color: #fff0f5; // lighter pink
+  }
+
+  .col-md-3 > div {
+    border: 1px solid #fcd4e4;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #fcd4e4;
+    }
+
+    strong {
+      color: #c0255d;
+    }
+
+    span {
+      color: #c0255d;
+    }
+  }
+
+.added {
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+

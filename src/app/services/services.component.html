@@ -1,0 +1,73 @@
+<section class="services container pt-5 mt-5">
+  <h2>Our Services</h2>
+  <div class="row">
+    <!-- Left Side: Categories -->
+    <div class="col-md-3">
+      <h5>Select Services</h5>
+      <div *ngFor="let category of services; let i = index" class="mb-1 border rounded p-2 dropdown-box">
+        <div class="d-flex justify-content-between align-items-center"
+             (click)="toggleDropdown(i, category)" style="cursor: pointer;">
+          <span><strong>{{ category.title }}</strong></span>
+          <span [ngClass]="{ 'rotate-90': toggleDropdownIndex === i }">&#9654;</span>
+        </div>
+        <div *ngIf="toggleDropdownIndex === i && category.items?.length" class="mt-2 ps-2 dropdown-list">
+          <div *ngFor="let item of category.items" class="list-group-item px-1 py-2 border-0 d-flex justify-content-between align-items-center">
+            <span>{{ item.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Selected Category + Flip Cards -->
+    <div class="col-md-9">
+
+      <!-- Moved this block ABOVE flip cards -->
+      <div *ngIf="activeCategory" class="mb-4">
+        <h4>{{ activeCategory.title }}</h4>
+        <ul class="list-group">
+          <li *ngFor="let item of activeCategory.items"
+              class="list-group-item d-flex justify-content-between align-items-center"
+              [class.added]="isInCart(item)">
+            {{ item.name }}
+            <div class="d-flex align-items-center">
+              <span class="badge bg-secondary rounded-pill me-2">₹{{ item.price }}</span>
+              <button class="btn btn-sm btn-outline-primary"
+                      (click)="addToCart(item)"
+                      [disabled]="isInCart(item)"
+                      [title]="isInCart(item) ? 'Already in cart' : 'Add to cart'">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="!activeCategory" class="text-muted text-center mb-4">
+        <p>Please select a service category to see details here.</p>
+      </div>
+
+      <!-- Flip Cards -->
+      <section class="hair-offer-wrapper container mt-5">
+        <div class="section-title"></div>
+        <div class="row justify-content-center">
+          <div class="flip-card col-md-4 mb-5" *ngFor="let offerGroup of hairOffers; let i = index">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img [src]="'assets/images/' + getImageName(i)" [alt]="offerGroup.title" />
+              </div>
+              <div class="flip-card-back">
+                <div *ngFor="let offer of offerGroup.items" class="offer-item">
+                  <div class="row">
+                    <div class="offer-name col-8">{{ offer.name }}</div>
+                    <div class="offer-price col-4 text-end">₹ {{ offer.price }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</section>

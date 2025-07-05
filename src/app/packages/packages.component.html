@@ -1,0 +1,54 @@
+<!-- Packages Section -->
+<section class="packages container pt-5 mt-5">
+  <h2>Our Packages</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4 mt-4" *ngFor="let package of packages">
+      <div class="card p-3">
+        <h4 class="text-center">{{ package.name }}</h4>
+        <h5 class="text-center">INR {{ package.price | number:'1.0-2' }}</h5>
+        <hr />
+        <ul>
+          <li *ngFor="let feature of package.features">
+            <i class="bi bi-1-circle"></i> {{ feature }}
+          </li>
+        </ul>
+        <button 
+          class="cta-btn"
+          [ngClass]="{ 'added': addedToCart.has(package.name) }"
+          [disabled]="addedToCart.has(package.name)"
+          (click)="addToCart(package, 'package')">
+          {{ addedToCart.has(package.name) ? 'Added' : 'Add to Cart' }}
+        </button>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Memberships Section -->
+<section class="memberships container mt-5">
+  <h2 class="text-center">Our Memberships</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4 mt-4" *ngFor="let member of memberships">
+      <div class="card p-3">
+        <h4 class="text-center">{{ member.name }}</h4>
+        <h5 class="text-center">INR {{ member.price | number:'1.0-2' }}</h5>
+        <hr />
+        <p>Become {{ member.name }} member when you spend INR {{ member.minSpend | number:'1.0-2' }} or more</p>
+        <ul class="text-start">
+          <li>{{ member.serviceDiscount }}% discount on each service</li>
+          <li>{{ member.productDiscount }}% discount on products</li>
+          <li>{{ member.packageDiscount }}% discount on packages</li>
+        </ul>
+        <button 
+          class="cta-btn"
+          [ngClass]="{ 'added': addedToCart.has(member.name) }"
+          [disabled]="addedToCart.has(member.name)"
+          (click)="addToCart(member, 'membership')">
+          {{ addedToCart.has(member.name) ? 'Added' : 'Add to Cart' }}
+        </button>
+
+      </div>
+    </div>
+  </div>
+</section>
